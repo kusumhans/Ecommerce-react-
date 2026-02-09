@@ -1,0 +1,10 @@
+.navbar{
+    background-color: rgba(128, 128, 128, 0.44);
+}
+
+.Header {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0.3rem;
+}
