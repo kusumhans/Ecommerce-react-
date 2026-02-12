@@ -1,0 +1,12 @@
+:root{
+    --blue-gray: #e1e8ea;
+    --blue-dark: #140a33;
+    --pale-blue:#433a69b5;
+    --jean-blue:#364b69;
+}
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}

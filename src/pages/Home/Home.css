@@ -1,0 +1,31 @@
+.home-tittle{
+    font-size: 3.5rem;
+    margin-top: 5rem;
+    letter-spacing: 1rem;
+}
+.category-tittle{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.category-list{
+    margin-top: 3rem;
+}
+.category-item{
+    border: 2px solid  var(--blue-dark);
+    box-shadow: 4px 4px 4px 4px var(--pale-blue);
+    margin-right: 2rem;
+    padding: 5px 30px ;
+    margin-bottom: 30px;
+    background-color: var(--jean-blue);
+    border-radius: 10px;
+    text-align: center;
+}
+.category-item a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+.category-item:hover{
+    box-shadow: 0px 0px 0px 0px;
+    transition: box-shadow 0.15s linear 0s;
+}

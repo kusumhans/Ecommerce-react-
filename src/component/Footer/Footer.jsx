@@ -2,7 +2,10 @@ import './Footer.css'
 function Footer(){
     return (
         <div>
-            <footer className="footer d-flex justify-content-evenly mt-auto py-3 bg-body-tertiary" >
+            <footer 
+            style={{marginTop:'15rem'}} 
+            className="footer d-flex justify-content-evenly py-3 bg-body-tertiary"
+             >
                 <div>About</div>
                 <div>Group companies</div>
                 <div>Help</div>
