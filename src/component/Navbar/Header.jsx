@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -23,7 +24,9 @@ function Header(props) {
   return (
     <div>
       <Navbar {...props} className='navbar'>
-        <NavbarBrand href="/" className="Header">shop Cart</NavbarBrand>
+        <NavbarBrand className="Header" >
+        <Link to='/'>shop Cart</Link>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ms-auto" navbar>  
