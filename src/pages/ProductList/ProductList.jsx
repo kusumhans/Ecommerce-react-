@@ -2,9 +2,9 @@
 import './ProductList.css'
 
 // image import
-import productImage from '../assets/-original-imahfjsfgu7vjkvw.webp'
-import ProductBox from '../component/productBox/productBox';
-import FilterProducts from '../component/FilterProducts/FilterProducts';
+import productImage from '../../assets/-original-imahfjsfgu7vjkvw.webp'
+import ProductBox from '../../component/productBox/productBox';
+import FilterProducts from '../../component/FilterProducts/FilterProducts';
 
 function ProductList(){
     return(
