@@ -1,0 +1,44 @@
+#product-list-tittle-min{
+    flex-basis: 62%;
+
+}
+.product-list-sidebar{
+    margin: 0 100px 0 100px; 
+    flex-basis: 23%;
+    
+}
+.product-list-sidebar a{
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    color: black;
+    border-bottom : 1px solid #95abc0;
+    background-color: #9ff9fb4e;
+}
+.product-list-sidebar a:last-child{
+    border-bottom: none;
+}
+.product-list-sidebar a:hover{
+    background-color: rgba(5, 123, 201, 0.34);
+    font-weight: bold;
+
+}
+
+.sidebar-tittle{
+    margin: 1rem 0 1rem 0;
+    font-weight: 500        ;
+    
+}
+.sidebar-search{
+    margin-bottom: 1rem;
+}
+.clear-search{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.clear-search:hover{
+    background-color: #e8b50e;
+    color: white;
+
+}
