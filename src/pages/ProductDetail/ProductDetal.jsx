@@ -5,8 +5,8 @@ import productImage from '../../assets/-original-imahfjsfgu7vjkvw.webp'
 export default function ProductDetail(){
     return(
         <div>
-                <div className="container1 ">
-            <div className="row ">
+            <div className="container ">
+              <div className="row ">
                 <div className="product-detail-wrapper d-flex flex-row justify-content-evenly  align-item-center">
                     <div className="product-img " >
                         <img 
@@ -25,8 +25,8 @@ export default function ProductDetail(){
                         </div>
                     </div>
 
-
-                     <div className="product-detail-action btn btn-danger text-decoration-none">
+                   <div className="product-detail d-flex">
+                          <div className="product-detail-action  btn btn-danger text-decoration-none ">
                         <i className="ri-shopping-cart-fill"></i>
                         ADD TO CART
                      </div> 
@@ -34,7 +34,7 @@ export default function ProductDetail(){
                         <i className="ri-flashlight-line"></i>
                         BUY NOW
                      </a>
-                         
+                   </div>
                     </div>
                 </div>
             </div>
