@@ -3,7 +3,7 @@ import './ProductList.css'
 
 // image import
 // import productImage from '../../assets/-original-imahfjsfgu7vjkvw.webp'
-import ProductBox from '../../component/productBox/productBox';
+import ProductBox from '../../component/productBox/ProductBox';
 import FilterProducts from '../../component/FilterProducts/FilterProducts';
 import { getALLProducts } from '../../apis/fakeStoreProductApis';
 import axios from 'axios';
