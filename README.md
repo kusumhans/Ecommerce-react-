@@ -21,62 +21,62 @@ Tailwind CSS – Responsive and modern styling<br/>
 DummyJSON API - Fetching dynamic product data.<br/>
 
 src
-|__apis
-|    |__fakeStoreProductApi.jsx
+|__apis<br/>
+|    |__fakeStoreProductApi.jsx<br/>
 |
-├── component
-|   ├──Auth
-|       ├──Auth.jsx
-|   ├──CartProduct
-|       ├──CartProduct.jsx
-|   ├──CategoryItem
-|       ├──CategoryItem.jsx
-|   ├──FilterProduct
-|       ├──FilterProduct.jsx
-|       ├──FilterProduct.css
-|   ├──Footer
-|       ├──Footer.jsx
-|       ├──Footer.css
-│   ├── Navbar.jsx
-|       ├──Header.jsx
-|       ├──Header.css
-│   ├── ProductBox.jsx
-|       ├──ProductBox.jsx
-|       ├──ProductBox.css
+├── component<br/>
+|   ├──Auth<br/>
+|       ├──Auth.jsx<br/>
+|   ├──CartProduct<br/>
+|       ├──CartProduct.jsx<br/>
+|   ├──CategoryItem<br/>
+|       ├──CategoryItem.jsx<br/>
+|   ├──FilterProduct<br/>
+|       ├──FilterProduct.jsx<br/>
+|       ├──FilterProduct.css<br/>
+|   ├──Footer<br/>
+|       ├──Footer.jsx<br/>
+|       ├──Footer.css<br/>
+│   ├── Navbar.jsx<br/>
+|       ├──Header.jsx<br/>
+|       ├──Header.css<br/>
+│   ├── ProductBox.jsx<br/>
+|       ├──ProductBox.jsx<br/>
+|       ├──ProductBox.css<br/>
 |
-├── pages
-|   ├──Authorization
-|       ├──Auth.css
-|       ├──Login.jsx
-|       ├──Signin.jsx
-|   ├──Cart
-|       ├──Cart.jsx
-|       ├──Cart.css
-|   ├──CheckOut
-|       ├──CheckOut.jsx
-|       ├──CheckOut.css
-|   ├──Error
-|       ├──Error.jsx
-|       ├──Error.css
-|   ├──ForgetPassword
-|       ├──ForgetPassword.jsx
-|       ├──ForgetPassword.css
-│   ├── Home.jsx
-|       ├──Home.jsx
-|       ├──Home.css
-│   ├── ProductDetail.jsx
-|       ├──ProductDetail.jsx
-|       ├──ProductDetail.css
-│   ├── ProductList.jsx
-|       ├──ProductList.jsx
-|       ├──ProductList.css
+├── pages<br/>
+|   ├──Authorization<br/>
+|       ├──Auth.css<br/>
+|       ├──Login.jsx<br/>
+|       ├──Signin.jsx<br/>
+|   ├──Cart<br/>
+|       ├──Cart.jsx<br/>
+|       ├──Cart.css<br/>
+|   ├──CheckOut<br/>
+|       ├──CheckOut.jsx<br/>
+|       ├──CheckOut.css<br/>
+|   ├──Error<br/>
+|       ├──Error.jsx<br/>
+|       ├──Error.css<br/>
+|   ├──ForgetPassword<br/>
+|       ├──ForgetPassword.jsx<br/>
+|       ├──ForgetPassword.css<br/>
+│   ├── Home.jsx<br/>
+|       ├──Home.jsx<br/>
+|       ├──Home.css<br/>
+│   ├── ProductDetail.jsx<br/>
+|       ├──ProductDetail.jsx<br/>
+|       ├──ProductDetail.css<br/>
+│   ├── ProductList.jsx<br/>
+|       ├──ProductList.jsx<br/>
+|       ├──ProductList.css<br/>
 |
-├── routers
-│   ├── MainRouters.jsx
+├── routers<br/>
+│   ├── MainRouters.jsx<br/>
 │
-├── App.jsx
-└── main.jsx
-|__index.css
+├── App.jsx<br/>
+└── main.jsx<br/>
+|__index.css<br/>
 
 Features
 
@@ -106,27 +106,27 @@ Features
 
 
 🛍️ Product Listing Page
--Product listing with category filter, sorting, and pagination.
--Random featured products section on homepage.
--Product search functionality integrated with navbar.
--Dynamic data fetching from DummyJSON API with loading indicator.
-- Clickable product cards that navigate to the product details page
--Display of product images, selected image preview, and thumbnail gallery.
--Shows price, discounted price, stock availability, and delivery info.
--Customer reviews section (dummy reviews).
--Add to Cart and Buy Now functionality.
+-Product listing with category filter, sorting, and pagination.<br/>
+-Random featured products section on homepage.<br/>
+-Product search functionality integrated with navbar.<br/>
+-Dynamic data fetching from DummyJSON API with loading indica<br/>tor.<br/>
+- Clickable product cards that navigate to the product details page<br/>
+-Display of product images, selected image preview, and thumbnail gallery.<br/>
+-Shows price, discounted price, stock availability, and delivery info.<br/>
+-Customer reviews section (dummy reviews).<br/>
+-Add to Cart and Buy Now functionality.<br/>
 
 ## 📄 Product Details Page
 
-- Displays detailed product information
-- Shows product image, title, price, rating, and description
-- Displays product category and brand
-- Add product to cart directly from the details page
-- Add product to wishlist
-- Image preview or gallery for better product view
-- Dynamic data fetching based on product ID
-- Navigation handled using **React Router**
-- Responsive layout for mobile, tablet, and desktop
+- Displays detailed product information<br/>
+- Shows product image, title, price, rating, and description<br/>
+- Displays product category and brand<br/>
+- Add product to cart directly from the details page<br/>
+- Add product to wishlist<br/>
+- Image preview or gallery for better product view<br/>
+- Dynamic data fetching based on product ID<br/>
+- Navigation handled using **React Router**<br/>
+- Responsive layout for mobile, tablet, and desktop<br/>
 
 ## 🛒 Cart Page
 
@@ -218,4 +218,4 @@ Please ensure your code follows the project structure and coding standards.
 If you'd like, I can also give you a **full professional README ending section** (License + Author + GitHub profile + project badges) that makes your repository look much more polished for internship recruiters. 🚀
 
 ## 📸 Screenshots
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/home.jpg)
