@@ -22,7 +22,7 @@ function ProductList(){
 
     useEffect(() =>{
         downloadeProducts(query.get('category'));
-    },[])
+    },[query.get('category')])
 
     return(
         <>
