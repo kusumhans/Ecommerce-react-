@@ -1,31 +1,46 @@
 // import css
 import './ProductDetail.css'
-import productImage from '../../assets/-original-imahfjsfgu7vjkvw.webp'
-import { Link } from 'react-router-dom'
+// import productImage from '../../assets/-original-imahfjsfgu7vjkvw.webp'
+import { Link, useParams } from 'react-router-dom'
+import {useEffect, useState} from 'react'
+import { getProduct } from '../../apis/fakeStoreProductApis';
+import axios from 'axios';
 
 
 export default function ProductDetail(){
- 
-        
+    const[product, setProduct] =  useState(null);
+
+    const {id} = useParams()
+
+    async function downloadedUrl(id){
+        const response = await axios.get(getProduct(id));
+        setProduct(response.data);
+        console.log(response.data);
+    }
+    useEffect(()=>{
+        downloadedUrl(id);
+    },[])
+         
     return(
+        product && (
         <div>
             <div className="container ">
               <div className="row ">
                 <div className="product-detail-wrapper d-flex flex-row justify-content-evenly  align-item-center">
                     <div className="product-img " >
                         <img 
-                            src={productImage} 
+                            src={product.image} 
                             alt="image " 
                             id="product-img"/>  
                     </div>
                    <div className="product-detail-box  d-flex flex-column">
                     <div id="product-detail">
-                        <div className="product-name" id="product-name">Google Pixel 9A (Obsidian, 256 GB)(8 GB RAM )</div>
-                        <div className="product-price" id="product-price">20% <span style={{textDecoration: "line-through", fontWeight:'lighter'}}>&nbsp;49,999</span>&nbsp;$39,999
-                        </div>
+                        <div className="product-name" id="product-name">{product.title}</div>
+                        <div className="product-price" id="product-price">&#8377;{product.price} </div>
                          <div className="product-description" id="product-description">
-                            <div className="product-description-title ">Google Pixel</div>
-                            <div className="product-description-data" id="product-description-data">Google Pixel is a premium smartphone series designed by Google. It runs on a clean version of Android and is known for its: </div>
+                            <div className="product-description-title ">description</div>
+                            <div className="product-description ">{product.description}</div>
+                            <div className="product-description-data" id="product-description-data"><span style={{color:'GrayText', fontWeight:'500'}}>Raiting and Reviews </span> <br /><span style={{color:'GrayText', fontWeight:'400', fontSize:'1.2rem', borderRadius: '2rem', border:'2px solid ', paddingRight:'0.5rem'}}>💚{product.rating.rate}</span>&nbsp;   <span style={{color:'GrayText', fontWeight:'400', fontSize:'1.2rem', borderRadius: '2rem', border:'2px solid ', paddingRight:'0.5rem'}}>❤️{product.rating.count}</span> </div>
                         </div>
                     </div>
 
@@ -43,6 +58,6 @@ export default function ProductDetail(){
                 </div>
             </div>
           </div>
-        </div>
+        </div>)
     )
 }

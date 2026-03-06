@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 import './ProductBox.css'
 
-function ProductBox({productImage, name, price}){
-    return (
+
+function ProductBox({productImage, name, price, productId}){
+    
+    return (    
              <Link  
-             to='/products/2'
+             to={`/products/${productId}`}
              href="product-detail.html" 
              target="_blank" 
              className="product-item text-decoration-none d-inline-block">
@@ -16,4 +18,4 @@ function ProductBox({productImage, name, price}){
              </Link> 
     )
 }
-export default ProductBox
+export default ProductBox   

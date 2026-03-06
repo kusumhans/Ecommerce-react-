@@ -1,4 +1,3 @@
-
 .product-detail-wrapper{
     padding-top: 3rem;
 }
@@ -7,7 +6,7 @@
 }
 .product-img img{
     width: 100%;
-    height: 80%;
+    height: 60%;
 }
 .product-detail-box{
     flex-basis: 50%;
@@ -17,21 +16,29 @@
 }
 .product-price{
     font-size: 1.4rem;
-    margin-top: 1rem;
+    margin-top: 0.4rem;
     font-weight: 500;
+    color: red;
 }
 .product-description-data{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1.7;
     text-align: justify;
 }
 .product-description-title{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin:  1rem 0;
+    color: rgba(0, 0, 0, 0.511);
+    font-weight: bold;
+}
+.product-description{
+    font-size: 1.3rem;
     margin:  1rem 0;
     font-weight: 400;
 }
 .product-detail-action{
     margin-top : 1rem  ;
     margin-left : 1rem  ;
+    margin-bottom : 1.5rem  ;
     width: 250px;
 }

@@ -35,6 +35,7 @@ function ProductList(){
                     {/* <!-- list of product --> */}
                         {products && products.map(  
                             (product) =>  <ProductBox 
+                                    productId={product.id}
                                     productImage={product.image} 
                                     name={product.title} 
                                     price= {product.price}
