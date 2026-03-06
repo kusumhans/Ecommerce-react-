@@ -173,11 +173,6 @@ Features
 - Simple and user-friendly checkout flow
 - Responsive design for mobile and desktop devices
 
-
-## 📸 Screenshots
-
-![Home page] (./screenshorts/home.jpg)
-
 ## ⚙️ Installation & Setup
 
 Follow these steps to run the project locally.
