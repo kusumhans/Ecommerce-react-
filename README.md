@@ -218,3 +218,6 @@ Please ensure your code follows the project structure and coding standards.
 If you'd like, I can also give you a **full professional README ending section** (License + Author + GitHub profile + project badges) that makes your repository look much more polished for internship recruiters. 🚀
 
 
+## 📸 Screenshots
+
+![Home Page](./screenshots/home.jpg)
