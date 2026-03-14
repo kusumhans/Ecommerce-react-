@@ -9,6 +9,7 @@ import axios from 'axios';
 
 export default function ProductDetail(){
     const[product, setProduct] =  useState(null);
+    const[added, setAdded] = useState(false)
 
     const {id} = useParams()
 
@@ -21,6 +22,11 @@ export default function ProductDetail(){
         downloadedUrl(id);
     },[])
          
+
+     const  addedTOCart = ()=>{
+            setAdded(true)
+        }
+
     return(
         product && (
         <div>
@@ -45,9 +51,9 @@ export default function ProductDetail(){
                     </div>
 
                    <div className="product-detail d-flex">
-                          <div className="product-detail-action  btn btn-danger text-decoration-none ">
+                          <div className={`product-detail-action btn text-decoration-none ${added ? "btn-success":"btn-danger"}`}  onClick={addedTOCart}>
                         <i className="ri-shopping-cart-fill"></i>
-                        ADD TO CART
+                       {added ? "added":"Add To Cart"}
                      </div> 
                      <Link to="/Cart" className="product-detail-action btn btn-warning text-decoration-none">
                         <i className="ri-flashlight-line"></i>

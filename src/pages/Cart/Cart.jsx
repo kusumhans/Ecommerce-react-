@@ -1,9 +1,14 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Cart.css'
 import CartProduct from '../../component/CartProduct/CartProduct'
 import ImageProduct from  '../../assets/-original-imahfjsfgu7vjkvw.webp'
 
 export default function Cart(){
+  const navigate = useNavigate();
+  
+    const ContinueShoping=()=>{
+      navigate('/products')
+    }
     return( 
         <div>
             <div className="container">
@@ -52,8 +57,7 @@ export default function Cart(){
             </div>
             <div className="continue-shoping-btn">
               <a
-                href="product-list.html"
-                className="continue-shopping btn btn-info text-decoration-none" >
+                className="continue-shopping btn btn-info text-decoration-none" onClick={ContinueShoping}>
                   Continue shopping
               </a>
               <Link
