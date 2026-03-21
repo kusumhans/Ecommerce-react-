@@ -21,11 +21,11 @@
     justify-content: center; */
 }
 .input-group{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .login-btn{
     width: 20rem;
-    margin-bottom: 1rem;
+    margin:  1.5rem 0 1rem 2.5rem;
 }
 .forgot{
     margin-bottom: 1.5rem;
@@ -34,7 +34,7 @@
     text-decoration: none;
 }
 .signup{
-    margin-top: 0.5rem;
+    margin-top: 0.5rem 1rem;
 }
 .signup a{
     text-decoration: none;

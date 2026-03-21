@@ -4,6 +4,8 @@ import './Auth.css';
 import { Link } from "react-router-dom";
 
 export default function LogIn(){
+
+
     return(
         <div className="container">
              <div className="row">
@@ -14,7 +16,7 @@ export default function LogIn(){
             <div className="container-info">
             <div className="Loginwrapper" id="LoginForm">
             <h2 className='Login text-center'>Login</h2>
-                <Auth/>     
+                <Auth/>    
             <div className="signup-btn text-center text-info" id="showSignupBtn" >Don't have an Account? Sign up</div>
             <div className="signup text-center">
                 <Link to='/signup'>Logout</Link>

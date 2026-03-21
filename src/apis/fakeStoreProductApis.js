@@ -8,3 +8,6 @@ export function getALLProducts() {
 export function getProduct(id){
     return `${import.meta.env.VITE_FAKE_STORE_URL}/products/${id}`; 
 }
+export function signup(){
+    return `${import.meta.env.VITE_FAKE_STORE_URL}/users`; 
+}
