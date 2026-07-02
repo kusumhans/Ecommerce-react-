@@ -1,34 +1,141 @@
- 
-.product-list-tittle{
-    font-size: 2.5rem;
-    font-family: serif;
-    margin: 1rem 0 ;
-    font-weight: 500;
-}
-.product-list-wrapper{
-    margin: 2rem 4rem 0 6rem;
-}
-.product-list-box{
-    flex-basis: 100%;
-}
-.product-list-box .product-item{
-    width: 23%;
-    margin-right: 2%;   
-    margin-bottom: 20px;
-    box-shadow: 0px 1px 5px #ccc;
-    border: 2px solid rgba(30, 30, 3, 0);
-    border-radius: 5px;
+/* ===========================
+   Title
+=========================== */
+
+.product-list-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 35px;
 }
 
+/* ===========================
+   Layout
+=========================== */
 
-.product-list-box .product-item .product-name{
-    font-size: 1.5rem ;
-    color: black;
+.product-layout {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
 }
-.product-list-box .product-item .product-price{
-    color: rgba(75, 79, 77, 0.595);
+
+/* Sidebar */
+
+.filter-section {
+  width: 280px;
+  flex-shrink: 0;
 }
-.product-list-box .product-item:hover{
-    box-shadow: 0px 4px 10px rgba(104, 102, 102, 0.678);
-    transition: box shadow 0.5s linear 1s;
+
+/* Products */
+
+.product-section {
+  flex: 1;
+}
+
+/* ===========================
+   Product Grid
+=========================== */
+
+.product-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+/* Card */
+
+.product-item {
+
+  width: 100% !important;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+
+  transition: .3s;
+}
+
+.product-item:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.product-price {
+  color: #2874f0;
+  font-weight: bold;
+}
+
+/* ===========================
+   Laptop
+=========================== */
+
+@media (max-width:1200px){
+
+.product-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:992px){
+
+.product-layout{
+
+flex-direction:column;
+
+}
+
+.filter-section{
+
+width:100%;
+
+}
+
+.product-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+.product-list-title{
+
+font-size:2rem;
+
+}
+
+.product-grid{
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
 }

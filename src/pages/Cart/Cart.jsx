@@ -6,7 +6,7 @@ import ImageProduct from  '../../assets/-original-imahfjsfgu7vjkvw.webp'
 export default function Cart(){
   const navigate = useNavigate();
   
-    const ContinueShoping=()=>{
+    const ContinueShopping=()=>{
       navigate('/products')
     }
     return( 
@@ -14,7 +14,7 @@ export default function Cart(){
             <div className="container">
       <div className="row ">
         <h2 className="Cart-title text-center ">Your Cart</h2>
-        <div className="cart-wrapper d-flex flex-row" id="cart-wrapper">
+        <div className="cart-wrapper d-flex flex-column flex-lg-row">
           <div className="order-detail d-flex flex-column" id="orderDetail">
             {/* <!-- todo   --> */}
             <div className="order-detail-tittle fw-bold">order Detail</div>
@@ -55,9 +55,9 @@ export default function Cart(){
                 </div>
               </div>
             </div>
-            <div className="continue-shoping-btn">
+            <div className="continue-shopping-btn">
               <a
-                className="continue-shopping btn btn-info text-decoration-none" onClick={ContinueShoping}>
+                className="continue-shopping btn btn-info text-decoration-none" onClick={ContinueShopping}>
                   Continue shopping
               </a>
               <Link

@@ -1,64 +1,102 @@
-// import css
-import './FilterProducts.css'
-import useCategory  from '../../hooks/useCategory';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import "./FilterProducts.css";
+import { useNavigate } from "react-router-dom";
+import useCategory from "../../hooks/useCategory";
 
-export default function FilterProducts(){
+export default function FilterProducts({
+  search,
+  setSearch,
+  minPrice,
+  setMinPrice,
+  maxPrice,
+  setMaxPrice,
+  clearFilters,
+}) {
+  const [categories] = useCategory();
+  const navigate = useNavigate();
 
-    const MinOption = [0, 10, 50, 100, 500, 1000];
-    const MaxOption = [0, 10, 50, 100, 500, 1000, 5000, 10000];
+  const minOptions = [0, 10, 50, 100, 500, 1000];
+  const maxOptions = [10, 50, 100, 500, 1000, 5000, 10000];
 
-    const[categories] = useCategory();
-    const navigate = useNavigate();
+  const handleCategoryNavigation = (category) => {
+    navigate(`/products?category=${category}`);
+  };
 
-    function handleCategoryNavigation(category){
-        navigate(`/products?category=${category}`)
-    }
+  return (
+    <aside className="product-list-sidebar">
 
-    return(
-        <div>
-             <div className="product-list-sidebar d-flex flex-column ">
-                    <div className="sidebar-tittle">
-                        Search product
-                    </div>
-                    <div className="sidebar-search form-group">
-                        <input type="search" placeholder="search by name" id="search-input"/>
-                    </div>
-                    <div className="sidebar-category ">category</div>
-                    <div id="category">
-                      {/* <!-- category are populated by js --> */}
-                        {categories  && categories.map((category)=> 
-                            <a onClick={() => handleCategoryNavigation(category)} key={category} className="d-flex text-decoration-none">{category}</a>)}
-                       
-                    </div>
-                    <div className="sidebar-tittle">filter by price</div>
-                    <div className="price-filter">
-                        <div className="price-filter-select d-flex flex-row justify-content-between ">
-                            <div className="form-group">
-                                <select name="minprice" id="minprice" className="form-group">
-                                    {MinOption.map(optionValue => 
-                                        <option key={optionValue} value={optionValue}>{optionValue}</option>)}
-                                </select>
-                            </div>
-                            <div className="form-group">
-                                <select name="maxprice" id="maxprice" className="form-group">
-                                {MaxOption.map(optionValue => 
-                                    <option key={optionValue} value={optionValue}>{optionValue}</option>)}
-                                </select>
-                            </div>
-                        </div>
-                        <div className="price-filter-tittle d-flex ">
-                            <div id="product-list-tittle-min">Min price</div>
-                            <div id="product-list-tittle-max">Max price</div>
-                        </div>
-                    </div>
-                    <button className="btn btn-warning clear-search" id="search">
-                    clear-search
-                    </button>
-                    <button className="btn btn-danger clear-filter" id="clear">
-                        clear-filter
-                    </button>
-                </div>
-        </div>
-    )
+      <h5 className="sidebar-title">Search Products</h5>
+
+      <div className="sidebar-search">
+        <input
+          type="search"
+          placeholder="Search products..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
+
+      <h5 className="sidebar-title mt-3">Categories</h5>
+
+      <div id="category">
+        {categories?.map((category) => (
+          <button
+            key={category}
+            className="category-btn"
+            onClick={() => handleCategoryNavigation(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <h5 className="sidebar-title mt-4">Price</h5>
+
+      <div className="price-filter-select">
+
+        <select
+          value={minPrice}
+          onChange={(e) => setMinPrice(Number(e.target.value))}
+        >
+          {minOptions.map((price) => (
+            <option key={price} value={price}>
+              Min ₹{price}
+            </option>
+          ))}
+        </select>
+
+        <select
+          value={maxPrice}
+          onChange={(e) => setMaxPrice(Number(e.target.value))}
+        >
+          {maxOptions.map((price) => (
+            <option key={price} value={price}>
+              Max ₹{price}
+            </option>
+          ))}
+        </select>
+
+      </div>
+
+     <div className="filter-btn-group">
+  <button
+    type="button"
+    className="btn btn-warning filter-btn"
+    onClick={() => setSearch("")}
+  >
+    <i className="ri-search-line"></i>
+    <span>Clear Search</span>
+  </button>
+
+  <button
+    type="button"
+    className="btn btn-danger filter-btn"
+    onClick={clearFilters}
+  >
+    <i className="ri-filter-off-line"></i>
+    <span>Clear Filters</span>
+  </button>
+</div>
+    </aside>
+  );
 }

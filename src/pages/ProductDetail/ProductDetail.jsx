@@ -44,7 +44,7 @@ export default function ProductDetail(){
         <div>
             <div className="container ">
               <div className="row ">
-                <div className="product-detail-wrapper d-flex flex-row justify-content-evenly  align-item-center">
+              <div className="product-detail-wrapper d-flex flex-column flex-lg-row justify-content-evenly align-item-center">
                     <div className="product-img " >
                         <img 
                             src={product.image} 
@@ -65,7 +65,7 @@ export default function ProductDetail(){
                         </div>
                     </div>
 
-                   <div className="product-detail d-flex">
+                    <div className="product-detail d-flex flex-column flex-md-row gap-3">
                           <div className={`product-detail-action btn text-decoration-none ${added ? "btn-success":"btn-danger"}`}  onClick={addedTOCart}>
                         <i className="ri-shopping-cart-fill"></i>
                        {added ? "added":"Add To Cart"}

@@ -1,11 +1,125 @@
-.navbar{
-    background-color: rgba(128, 128, 128, 0.44);
+/* ==========================
+   Navbar
+========================== */
+
+.custom-navbar {
+  background:#111827;
+  backdrop-filter: blur(12px);
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.Header  a {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #000000;
-    letter-spacing: 0.3rem;
-    text-decoration: none;
+/* ==========================
+   Logo
+========================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff !important;
+  text-decoration: none;
+  padding-left: 6rem;
+}
+
+.logo span {
+  color: white;
+}
+.logo span:hover {
+  color: #4e46e5a1;
+}
+
+.cart-logo {
+  font-size: 2.2rem;
+  color: #4f46e5;
+}
+
+/* ==========================
+   Nav Links
+========================== */
+
+.nav-link {
+  color: white !important;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 1.2rem;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #6366f1 !important;
+}
+
+.welcome-text {
+  color: white !important;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+/* ==========================
+   Hamburger
+========================== */
+
+.navbar-toggler-custom {
+  border: none !important;
+  margin-left: auto;
+}
+
+.navbar-toggler-custom:focus {
+  box-shadow: none;
+}
+
+/* White hamburger icon */
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 767px) {
+
+  .custom-navbar {
+    padding: 14px 18px;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    
+  }
+
+  .cart-logo {
+    font-size: 2rem;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    background: #111827;
+    margin-top: 15px;
+    border-radius: 12px;
+    padding: 15px;
+  }
+
+  .nav-link {
+    margin: 12px 0;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .welcome-text {
+    display: block;
+    margin: 12px 0 0;
+    text-align: center;
+  }
 }

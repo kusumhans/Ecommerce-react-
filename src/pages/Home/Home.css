@@ -1,6 +1,7 @@
 .home-tittle{
     font-size: 3.5rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     letter-spacing: 1rem;
 }
 .category-tittle{
@@ -9,7 +10,8 @@
     margin-bottom: 8rem;
 }
 .category-list{
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 #categoryList{
     margin: 4rem 0 4rem 0;
@@ -35,4 +37,35 @@
 }
 .div-wrapper{
     margin-top: 7rem;
+}
+
+@media screen and (max-width: 768px){
+    .home-tittle{
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+      }
+    
+      .category-list{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    
+      .category-item{
+        width: 100%;
+        margin-right: 0;
+      }
+    
+      .category-item a{
+        font-size: 1.1rem;
+      }
+    
+}
+@media screen and (max-width: 480px){
+    .home-tittle{
+        font-size: 1.5rem;
+      }
+      .category-item{
+        padding: 10px;
+      }
+    }    
 }

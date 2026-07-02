@@ -1,194 +1,281 @@
+/* ==========================
+   Page
+========================== */
 
-.continer-box{
-    background-color: #F1F3F6;
-    
+.continer-box {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
 }
-.row-box{
+
+.row-box {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.69);
+}
+
+/* ==========================
+   Step Header
+========================== */
+
+.loginbar {
+  background: #2874f0;
+  color: white;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+}
+
+.loginbar .div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  color: #2874f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* ==========================
+   Content
+========================== */
+
+.loginorsignup {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 30px;
+}
+
+.rightside {
+  flex: 1;
+}
+
+.leftside {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* ==========================
+   Input
+========================== */
+
+.name input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 0 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.name input:focus {
+  border-color: #2874f0;
+}
+
+/* ==========================
+   Terms
+========================== */
+
+.termspolicy {
+  margin: 20px 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.termspolicy a {
+  color: #2874f0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ==========================
+   Button
+========================== */
+
+.rightside button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #fb641b;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.rightside button:hover {
+  background: #e95b15;
+}
+
+/* ==========================
+   Benefits
+========================== */
+
+.Advantages {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.orders,
+.alerts,
+.Reviews {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+  color: #444;
+}
+
+.truck,
+.bell,
+.star {
+  color: #2874f0;
+  font-size: 20px;
+}
+
+/* ==========================
+   Sections
+========================== */
+
+.Delivery,
+.ordersummary,
+.paymentoption {
+  padding: 18px 20px;
+  border-top: 1px solid #eee;
+  font-weight: 600;
+  background: #fafafa;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: #2874f0;
+  text-decoration: none;
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width: 992px) {
+
+  .loginorsignup {
+    flex-direction: column;
+  }
+
+  .leftside,
+  .rightside {
     width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-.div{
-    background-color: white;
-    width: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    color: #2874F0 ;
-    font-size: 0.9rem;
-    border-radius: 2px;
-}
-.loginbar{
-    background-color: #2874F0;
-    width: 60%;
-    margin-left: 8rem;
-    height: 50px;
-    font-size: 1.3rem;
-    display: flex;
-    color: white;
-    align-items: center;
-}
-.loginorsignup{
-    width: 60%;
-    margin-left: 8rem;
-    background-color: white;
-    border-bottom: rgb(6, 3, 3)
-}
-.rightside{
-    width: 40%;
-    margin-top: 3rem;
-    margin-left: 3rem;
-}
-.termspolicy{
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: gray;
-}
-button{
-    color: white;
-    background-color: rgba(255, 77, 0, 0.867);
-    border: none;
-    width: 80%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    height: 23%;
-}
-.name input{
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.332)  ;
-}
-.leftside{
-    width: 40%;
-    margin-top: 3rem;
-    margin-left: 5rem;
-}
-.Advantages{
-    color: rgba(128, 128, 128, 0.608);
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-.orders{
-    color: black;
-    font-family: sans-serif;
-    font-size: 0.87rem;
-    margin-bottom: 1.5rem;
+  }
 
 }
-.truck{
-    margin-right: 1rem;
-    color: #2874F0;
-}
 
-.alerts{
-     color: black;
-    font-family: sans-serif;
-    font-size: 0.87rem;
-    margin-bottom: 1.5rem;
-}
-.bell{
-    margin-right: 1rem;
-    color: #2874F0;
-}
-.Reviews{
-    color: black;
-    font-family: sans-serif;
-    font-size: 0.87rem;
-    margin-bottom: 1.5rem;
-}
-.star{
-    margin-right: 1rem;
-    color: #2874F0;
-}
-.Delivery{
-    height: 40px;
-    width: 60%;
-    margin-left: 8rem;
-    margin-top: 1rem;
-    background-color: white;
-    color: hwb(0 36% 60% / 0.64);
-    font-weight: 700;
-    padding-left: 4rem;
-    display: flex;
-    align-items: center;
-}
-.Delivery::before{
-    content: "1";
-     background-color: rgba(128, 128, 128, 0.097);
-    width: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    color: #2874F0 ;
-    font-size: 0.9rem;
-    border-radius: 2px;
-}
-.ordersummary{
-    height: 40px;
-    width: 60%;
-    margin-left: 8rem;
-    margin-top: 1rem;
-    background-color: white;
-    color: hwb(0 36% 60% / 0.64);
-    font-weight: 700;
-    padding-left: 4rem;
-    display: flex;
-    align-items: center;
-}
-.ordersummary::before{
-    content: "2";
-     background-color: rgba(128, 128, 128, 0.097);
-    width: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    color: #2874F0 ;
-    font-size: 0.9rem;
-    border-radius: 2px;
-}
-.paymentoption{
-    height: 40px;
-    width: 60%;
-    margin-left: 8rem;
-    margin-top: 1rem;
-    background-color: white;
-    color: hwb(0 36% 60% / 0.64);
-    font-weight: 700;
-    padding-left: 4rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-.paymentoption::before{
-    content: "3";
-     background-color: rgba(128, 128, 128, 0.097);
-    width: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    color: #2874F0 ;
-    font-size: 0.9rem;
-    border-radius: 2px;
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 768px) {
+
+  .continer-box {
+    margin: 15px auto;
+    padding: 0 10px;
+  }
+
+  .loginbar {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .loginorsignup {
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .name input {
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .rightside button {
+    height: 46px;
+    font-size: 15px;
+  }
+
+  .Advantages {
+    font-size: 16px;
+  }
+
+  .orders,
+  .alerts,
+  .Reviews {
+    font-size: 14px;
+  }
+
+  .Delivery,
+  .ordersummary,
+  .paymentoption {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    font-size: 13px;
+  }
 
 }
-hr{
-    color: gray;
-}
-.rightfooter {
-    margin-left: 5rem;
-    font-size: .9rem;
-    color: rgb(77, 75, 75);
-    width: 70%;
-}
-.link{
-    margin-left: 3rem;
-}
-.leftfooter  {
-    font-size: .9rem;
-    color: rgb(77, 75, 75);
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media (max-width: 480px) {
+
+  .loginbar {
+    font-size: 14px;
+  }
+
+  .loginbar .div {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .Advantages {
+    font-size: 15px;
+  }
+
+  .orders,
+  .alerts,
+  .Reviews {
+    font-size: 13px;
+  }
+
+  .termspolicy {
+    font-size: 13px;
+  }
+
 }

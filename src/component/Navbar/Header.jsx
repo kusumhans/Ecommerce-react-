@@ -1,59 +1,83 @@
-import React, { useEffect, useState } from 'react';
-import './Header.css';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import "./Header.css";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
+  NavItem,
+  NavLink,
   NavbarText,
-} from 'reactstrap';
-import { useCookies } from 'react-cookie';
+} from "reactstrap";
+import { useCookies } from "react-cookie";
 
-function Header(props) {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [token, setToken, removeToken] = useCookies(['jwt-token']);
+  const [token, setToken, removeToken] = useCookies(["jwt-token"]);
 
   const toggle = () => setIsOpen(!isOpen);
-  useEffect(()=>{
-    console.log(token, setToken, removeToken);
-  }, [token])
-  
+
+  useEffect(() => {
+    console.log(token);
+  }, [token]);
+
   return (
-    <div>
-      <Navbar {...props} className='navbar'>
-        <NavbarBrand className="Header" >
-        <Link to='/'>shop Cart</Link>
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ms-auto" navbar>  
-            <UncontrolledDropdown nav inNavbar style={{marginRight: '2rem'}}>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Cart</DropdownItem>
-                <DropdownItem>Settings</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                    {token['jwt-token'] ? <Link onClick={() => {
-                      console.log(token);
-                        removeToken('jwt-token');
-                    }} to='/signin'>LogOut</Link> : <Link to='/signin'>signIn</Link> }
-                </DropdownItem>
-              </DropdownMenu> 
-            </UncontrolledDropdown>
-              <NavbarText>Hi User</NavbarText>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <Navbar expand="md" className="navbar custom-navbar">
+
+      {/* Logo */}
+      <NavbarBrand tag={Link} to="/" className="logo">
+        <i className="ri-shopping-cart-2-fill cart-logo"></i>
+        <span>ShopCart</span>
+      </NavbarBrand>
+
+      {/* Hamburger */}
+      <NavbarToggler
+        onClick={toggle}
+        className="navbar-toggler-custom ms-auto"
+      />
+
+      {/* Menu */}
+      <Collapse navbar isOpen={isOpen}>
+        <Nav className="ms-auto align-items-md-center" navbar>
+
+          <NavItem>
+            <NavLink tag={Link} to="/cart">
+              Cart
+            </NavLink>
+          </NavItem>
+
+          <NavItem>
+            <NavLink tag={Link} to="/settings">
+              Settings
+            </NavLink>
+          </NavItem>
+
+          <NavItem>
+            {token["jwt-token"] ? (
+              <NavLink
+                tag={Link}
+                to="/signin"
+                onClick={() => removeToken("jwt-token")}
+              >
+                Logout
+              </NavLink>
+            ) : (
+              <NavLink tag={Link} to="/signin">
+                Sign In
+              </NavLink>
+            )}
+          </NavItem>
+
+          <NavbarText className="welcome-text">
+            Hi User 👋
+          </NavbarText>
+
+        </Nav>
+      </Collapse>
+
+    </Navbar>
   );
 }
 
